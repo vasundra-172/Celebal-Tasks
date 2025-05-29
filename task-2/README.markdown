@@ -52,27 +52,6 @@ A simple file management tool built using Node.js core modules (`fs`, `path`, an
 - **Delete a File**:
   - Click the "Delete" button next to a file to remove it from the `files` directory.
 
-## Endpoints
-The application exposes the following HTTP endpoints:
-- `GET /`: Serves the HTML interface (`index.html`).
-- `GET /client.js`: Serves the client-side JavaScript.
-- `GET /files`: Lists all files in the `files` directory as JSON.
-- `GET /read/:filename`: Returns the content of the specified file.
-- `POST /create`: Creates a new file with the provided filename and content (URL-encoded form data).
-- `DELETE /delete/:filename`: Deletes the specified file.
-
-## Technical Details
-- **Modules Used**:
-  - `fs.promises`: For asynchronous file operations.
-  - `path`: For cross-platform file path handling.
-  - `http`: For creating the web server.
-- **File Storage**:
-  - Files are stored in the `files` directory, created automatically in the project root.
-- **Static Files**:
-  - The `public` directory contains `index.html` and `client.js`, served as static files.
-- **Error Handling**:
-  - Basic error handling is implemented for file operations and server requests (e.g., 404 for missing files, 500 for server errors).
-
 ## Notes
 - The application creates the `files` and `public` directories automatically if they do not exist.
 - No external dependencies are required, making it lightweight and portable.
